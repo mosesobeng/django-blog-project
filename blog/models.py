@@ -8,12 +8,18 @@ class Post(models.Model):
     created = models.DateField()
     updated = models.DateField() 
 
+    def __unicode__(self):
+       return self.title
+
 class Comment(models.Model):
     body = models.TextField()
     author = models.CharField(max_length=60)
     created = models.DateField()
     updated = models.DateField()
     post = models.ForeignKey(Post,related_name='post')
+
+     def __unicode__(self):
+       return self.post
 
 class PostAdmin(admin.ModelAdmin):
     list_display=('title','created','updated')
