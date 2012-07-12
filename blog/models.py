@@ -18,8 +18,7 @@ class Comment(models.Model):
     updated = models.DateField()
     post = models.ForeignKey(Post,related_name='post')
 
-     def __unicode__(self):
-       return self.post
+     
 
 class PostAdmin(admin.ModelAdmin):
     list_display=('title','created','updated')
