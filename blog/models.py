@@ -11,6 +11,9 @@ class Post(models.Model):
     def __unicode__(self):
        return self.title
 
+    def body_first_60 (self):
+       return self.body[:60] 
+
 class Comment(models.Model):
     body = models.TextField()
     author = models.CharField(max_length=60)

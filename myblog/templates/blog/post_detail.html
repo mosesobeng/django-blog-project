@@ -1,14 +1,30 @@
-{% extends 'blog/base.html'%}
+{% extends 'blog/baseAfterLogin.html'%}
 {%block content%}
- <h2><a href="/blog/posts/{{ post.id }}/True"><!-- this is the worst, but simplest way to link to the specific post.
-                                                     Read the document mentioned in the instructions for more info-->
-			{{ post.title }}
+
+		<ul>
+	  	
+	  	<h1>{{wanted_post.title}}</h1><br>
+	  	{{wanted_post.body}}<br>
+	  	</li>
+	</ul>
+
 		</a>
- </h2>		
- <p>
- 	{{post.body}}
- </p>	
- {%for comment in comments%}
- 
- {%endfor%}
-{%endblock%}		
+<h4>Comments</h4>
+{% for com in comments %}
+
+	Author: {{ com.author }}<br/>
+	Body: {{ com.body }}<br/>
+	Date Created: {{ com.created }}<br/>
+	Date Updated: {{ com.updated }}<br/>
+<div>
+	<a href="/blog/comments/{{ com.id }}/edit">Edit Comment</a>
+</div><br/>
+{% endfor %}
+<h3>New comment:</h3>
+<div>
+<form method='post' action="">
+{{form.as_p}}
+<input type='submit' name='Submit'>
+</form>
+</div>	
+{%endblock%}

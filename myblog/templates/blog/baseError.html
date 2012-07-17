@@ -44,19 +44,29 @@
           <div class="btn-group pull-right">
 
            <form class="navbar-form pull-right form-inline" method='POST' action=''>
+<fieldset
+  class="control-group error">
+
+
                                <input type="text" class="input-small" placeholder="Username" name="username">
                                <input type="password" class="input-small" placeholder="Password" name="password">
-                               <label class="checkbox">
-                               <input type="checkbox"> Remember me
+                               Authentication Failed
                                </label>
-                               <button type="submit" class="btn btn-primary">Sign in</button>
+                               <button type="submit" class="btn btn-danger">Sign in</button>
+</fieldset>
    </form>
-           
+            <ul class="dropdown-menu">
+              <li><a href="#">Profile</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Sign Out</a></li>
+
+            </ul>
           </div>
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="#">Blogs</a></li>
-
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
 
             </ul>
           </div><!--/.nav-collapse -->
@@ -83,14 +93,6 @@
         <div>
           <h2></h2>
            <p>
-		<h1>Currently Website Under Testing...</h1>
-		<p>
-		<p>
-                username: user
-                password: password
-                <p>
-		<p>
-		Obtain personal account by sending detials to mosesobengjunior@gmail.com 
 		<div id="content">
 		{%block content%}
 		{%endblock%}

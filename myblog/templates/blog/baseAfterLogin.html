@@ -42,23 +42,35 @@
           </a>
           <a class="brand" href="#">The Blog Project</a>
           <div class="btn-group pull-right">
+            
+            <a class="btn btn-danger"  href="base">
 
-           <form class="navbar-form pull-right form-inline" method='POST' action=''>
-                               <input type="text" class="input-small" placeholder="Username" name="username">
-                               <input type="password" class="input-small" placeholder="Password" name="password">
-                               <label class="checkbox">
-                               <input type="checkbox"> Remember me
-                               </label>
-                               <button type="submit" class="btn btn-primary">Sign in</button>
-   </form>
-           
+              <i class="icon-share-alt"></i>  Sign Out
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+            
+
+            </ul>
           </div>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Blogs</a></li>
-
-
+              <li class="active"><a href="/blog/posts">Blogs</a></li>
+              
+                                         		</a></li> 
             </ul>
+    <div class="control-group">
+            <label class="control-label" for="appendedInputButton">			</label>
+            <div class="controls">
+
+              <div class="input-append">
+<form method='post1' action="">
+                <input class="span2" id="appendedInputButton" size="16" type="text"><button type= "submit" class="btn btn-info" name="query">Go!</button>
+</form>
+
+              </div>
+            </div>
+          </div>
           </div><!--/.nav-collapse -->
         </div>
       </div>
@@ -83,14 +95,6 @@
         <div>
           <h2></h2>
            <p>
-		<h1>Currently Website Under Testing...</h1>
-		<p>
-		<p>
-                username: user
-                password: password
-                <p>
-		<p>
-		Obtain personal account by sending detials to mosesobengjunior@gmail.com 
 		<div id="content">
 		{%block content%}
 		{%endblock%}

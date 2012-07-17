@@ -1,9 +1,8 @@
-{%extends 'blog/base.html' %}
+{%extends 'blog/baseAfterLogin.html' %}
 {% block content %}
 {% for post in posts %}
 	<h2>
-		<a href="/blog/posts/{{ post.id }}/True"><!-- this is the worst, but simplest way to link to the specific post.
-                                                     Read the document mentioned in the instructions for more info-->
+		<a href="/blog/posts/{{ post.id }}/True">
 			{{ post.title }}
 		</a>
 	</h2>
@@ -18,8 +17,7 @@
 		</li>
 		
 		<li>
-			{{ post.body_first_60 }} <!-- replace body_first_60 with whatever you called your
-                                          method to get the first 60 characters of the body!-->
+			{{ post.body_first_60 }}...
 		</li>
 		
 	</ul>
